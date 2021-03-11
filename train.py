@@ -2,11 +2,10 @@ from torch.utils.data import DataLoader, Dataset
 import os
 import cv2
 from torchvision import transforms
-from ptsemseg.models.unet_pl import *
+from unet_pl import *
 import torch
 from PIL import Image
 from tqdm import tqdm
-from ptsemseg.models.unet import *
 import numpy as np
 
 transforms = transforms.Compose([transforms.ToTensor(),
