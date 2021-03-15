@@ -46,13 +46,13 @@ class CrackDataset(Dataset):
     def get_name(self, i):
         return(self.images[i])
 
-train_dataset = CrackDataset('G:\paper\pytorch-semseg-master\data/train_imgs/',
-                             'G:\paper\pytorch-semseg-master\data/train_labs/')
+train_dataset = CrackDataset('iamge_path',
+                             'label_path')
 
 
 
-val_dataset = CrackDataset('G:\paper\pytorch-semseg-master\data/val_imgs/',
-                            'G:\paper\pytorch-semseg-master\data/val_labs')
+val_dataset = CrackDataset('iamge_path',
+                           'label_path')
 
 train_loader = DataLoader(train_dataset, batch_size=4, shuffle = True)
 val_loader = DataLoader(val_dataset, batch_size=4, shuffle = True)
